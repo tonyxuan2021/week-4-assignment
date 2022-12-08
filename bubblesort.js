@@ -36,6 +36,21 @@ const data = [
   },
 ];
 
+const sortedByRating = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+      if (
+        array[j].favoriteMovie[0].rating > array[j + 1].favoriteMovie[0].rating
+      ) {
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  }
+  return array;
+};
+
 const sortedByAge = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     for (let j = 0; j < i; j++) {
@@ -48,5 +63,3 @@ const sortedByAge = (array) => {
   }
   return array.reverse();
 };
-
-console.log(sortedByAge(data));
