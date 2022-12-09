@@ -19,10 +19,14 @@ function capitalizeAllLetters(arr) {
   }
 
   return [arr[0].toUpperCase()].concat(capitalizeWords(arr.slice(1)));
-  // [tony, kim, james]
-  // [kim, james]
-  // [james]
-  // [tony].toUpperCase + capitalizeWords([kim, james])
 }
 
-// console.log(capitalizeWords(['tony', 'kim', 'james']));
+// Problem 3: Recursion
+function factorial(x) {
+  if (x < 1) {
+    return 1;
+  }
+  return x * factorial(x - 1);
+}
+
+
