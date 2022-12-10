@@ -29,4 +29,14 @@ function factorial(x) {
   return x * factorial(x - 1);
 }
 
+// Problem 4: Recursion (couldn't solve with recursion)
 
+function collectStrings(obj) {
+  let resultArr = [];
+  for (let key in obj) {
+    if (typeof obj[key] === 'string') {
+      resultArr.push(obj[key]);
+    }
+  }
+  return resultArr;
+}
